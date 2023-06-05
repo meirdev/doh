@@ -25,7 +25,7 @@ def openai_correct(command: Command):
 
     try:
         results = openai.Completion.create(
-            prompt=f"""The command:\n{shlex.join(command.args)}\n---\n{output}Return a valid python code of a list of possible fixes.""",
+            prompt=f"""The command:\n{shlex.join(command.args)}\n---\n{output}Return a possible corrections - shell commands only, the response must be a valid python list, each command is an item in the list.""",
             engine=ENGINE,
             temperature=TEMPERATURE,
             max_tokens=MAX_TOKENS,
