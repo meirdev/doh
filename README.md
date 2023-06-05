@@ -1,4 +1,6 @@
-![Homer Simpson](assets/homer_simpson_doh.png)
+<p align="center">
+  <img src="assets/homer_simpson_doh.png" alt="Homer Simpson" height="180">
+</p>
 
 # D'oh!
 
@@ -7,5 +9,5 @@ Fix command error instantly!
 ## Installation
 
 ```bash
-alias doh='echo ''"''$(history | tail -n2 | head -n1 | sed "s/^ *[0-9]* *//")''"'
+alias doh='python -m doh ''"''$(history | tail -n2 | head -n1 | sed "s/^ *[0-9]* *//")''"'
 ```
